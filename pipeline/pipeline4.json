@@ -17,7 +17,13 @@
 				"typeProperties": {
 					"dataflow": {
 						"referenceName": "dataflow1",
-						"type": "DataFlowReference"
+						"type": "DataFlowReference",
+						"parameters": {
+							"odd_or_even": {
+								"value": "@variables('p_odd_or_even')",
+								"type": "Expression"
+							}
+						}
 					},
 					"compute": {
 						"coreCount": 8,
@@ -27,6 +33,11 @@
 				}
 			}
 		],
+		"variables": {
+			"p_odd_or_even": {
+				"type": "Integer"
+			}
+		},
 		"annotations": []
 	}
 }
