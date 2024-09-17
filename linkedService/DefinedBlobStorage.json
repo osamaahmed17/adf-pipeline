@@ -1,0 +1,11 @@
+{
+	"name": "DefinedBlobStorage",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"containerUri": "https://rgendgwesteu004985f.blob.core.windows.net/sink",
+			"authenticationType": "Anonymous"
+		}
+	}
+}
