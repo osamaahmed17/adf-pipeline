@@ -41,7 +41,7 @@
 			],
 			"scriptLines": [
 				"parameters{",
-				"     odd_or_even as string",
+				"     odd_or_even as integer",
 				"}",
 				"source(output(",
 				"          registration_dttm as timestamp,",
