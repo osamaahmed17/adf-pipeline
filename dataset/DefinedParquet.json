@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "defined"
+				"fileName": "userdata1.parquet",
+				"container": "source"
 			},
 			"compressionCodec": "snappy"
 		},
