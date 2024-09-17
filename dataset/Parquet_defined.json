@@ -1,0 +1,20 @@
+{
+	"name": "Parquet_defined",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZStorage004",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "merged.parquet",
+				"container": "defined"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
