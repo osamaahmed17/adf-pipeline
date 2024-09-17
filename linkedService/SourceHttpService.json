@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://raw.githubusercontent.com/ruddra/hackathon-dataset/main/bank_users_info_group_a.csv",
+			"url": "https://raw.githubusercontent.com/ruddra/hackathon-dataset/main/bank_users_info_group_b.csv",
 			"enableServerCertificateValidation": false,
 			"authenticationType": "Anonymous"
 		}
