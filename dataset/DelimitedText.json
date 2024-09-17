@@ -1,0 +1,48 @@
+{
+	"name": "DelimitedText",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SourceStorageLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "07709d5c-b2f5-4499-ba34-d156c048049f",
+				"container": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "datasetName",
+				"type": "String"
+			},
+			{
+				"name": "about",
+				"type": "String"
+			},
+			{
+				"name": "link",
+				"type": "String"
+			},
+			{
+				"name": "categoryName",
+				"type": "String"
+			},
+			{
+				"name": "cloud",
+				"type": "String"
+			},
+			{
+				"name": "vintage",
+				"type": "String"
+			}
+		]
+	}
+}
