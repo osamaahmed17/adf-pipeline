@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "merged.parquet",
+				"fileName": "part-00000-b6d12beb-62a0-4b2a-a708-05e8c283dadb-c000.snappy.parquet",
 				"container": "defined"
 			},
 			"compressionCodec": "snappy"

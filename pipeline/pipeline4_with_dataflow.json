@@ -1,5 +1,5 @@
 {
-	"name": "pipeline4",
+	"name": "pipeline4_with_dataflow",
 	"properties": {
 		"activities": [
 			{
