@@ -2,15 +2,14 @@
 	"name": "Parquet1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "SinkAzureBlobStorage",
+			"referenceName": "SinkBlobStorage",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"container": "sink"
+				"type": "AzureBlobStorageLocation"
 			},
 			"compressionCodec": "snappy"
 		},
