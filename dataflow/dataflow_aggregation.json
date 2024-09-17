@@ -5,14 +5,57 @@
 		"typeProperties": {
 			"sources": [
 				{
+					"dataset": {
+						"referenceName": "Parquet_defined",
+						"type": "DatasetReference"
+					},
 					"name": "source1"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Aggregated_Parquet",
+						"type": "DatasetReference"
+					},
+					"name": "aggregated"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "filter1"
+				}
+			],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source1"
+				"source(output(",
+				"          age as double,",
+				"          job as string,",
+				"          marital as string,",
+				"          education as string,",
+				"          default as string,",
+				"          housing as string,",
+				"          loan as string,",
+				"          contact as string,",
+				"          month as string,",
+				"          day_of_week as string,",
+				"          unique_id as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'parquet') ~> source1",
+				"source1 derive(has_blank = isNull(age) || isNull(education) || isNull(contact) || isNull(month) ) ~> derivedColumn1",
+				"derivedColumn1 filter(equals(has_blank, false())) ~> filter1",
+				"filter1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'parquet',",
+				"     partitionFileNames:['cleaned.parquet'],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> aggregated"
 			]
 		}
 	}

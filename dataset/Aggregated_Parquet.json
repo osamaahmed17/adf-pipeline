@@ -1,0 +1,20 @@
+{
+	"name": "Aggregated_Parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZStorage004",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "cleaned.parquet",
+				"container": "aggregated"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
