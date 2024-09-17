@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "dataset_b.csv",
 				"container": "source"
 			},
 			"columnDelimiter": ",",
