@@ -22,7 +22,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "Parquet_defined",
+						"referenceName": "Parquet2",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
