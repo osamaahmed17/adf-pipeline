@@ -1,12 +1,17 @@
 {
 	"name": "SourceCSVDelimitedText",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SourceStorageLinkedService",
+			"type": "LinkedServiceReference"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "sink"
+				"fileName": "userdata1.parquet",
+				"container": "source"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
