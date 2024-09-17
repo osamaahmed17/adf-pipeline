@@ -1,12 +1,12 @@
 {
-	"name": "Parquet1",
+	"name": "DefineParquet",
 	"properties": {
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "defined"
+				"container": "sink"
 			},
 			"compressionCodec": "snappy"
 		},
